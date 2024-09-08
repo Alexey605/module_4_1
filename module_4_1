@@ -1,0 +1,31 @@
+# Модуль 4.1
+from fake_math import fake_divide as f_d
+from true_math import true_divide as t_d
+
+result1 = f_d(69, 3)
+result2 = f_d(3, 0)
+result3 = t_d(49, 7)
+result4 = t_d(15, 0)
+print(result1)
+print(result2)
+print(result3)
+print(result4)
+
+
+# Деление, возвращающее ошибку
+def fake_divide(first, second):
+    if second == 0:
+        result = 'Ошибка'
+    else:
+        result = first / second
+    return result
+
+
+# Деление, возвращающее бесконечность
+def true_divide(first, second):
+    from math import inf
+    if second == 0:
+        result = inf
+    else:
+        result = first / second
+    return result
